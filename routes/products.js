@@ -43,7 +43,7 @@ router.put('/:id', (req, res, next) => {
     });
 })
 
-//delete a phone
+//delete a product
 router.delete('/:id', (req, res, next) => {
     Product.findByIdAndRemove(req.params.id).then(p => {
         res.status(200).json(p)
