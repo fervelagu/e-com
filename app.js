@@ -19,6 +19,10 @@ mongoose
   });
 
 const app = express();
+// app.use(require('cors')({
+//   origin: true,
+//   credentials: true
+// }))
 
 //session
 app.use(session({
@@ -53,12 +57,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //routes
-const auth = require('./routes/auth');
 const products = require('./routes/products');
 const index = require('./routes/index');
 
 //index must go last
-app.use('/', auth);
 app.use('/products', products);
 app.use('/', index);
 

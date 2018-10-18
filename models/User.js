@@ -3,10 +3,6 @@ const Schema = require('mongoose').Schema;
 const userSchema = new require('mongoose').Schema({
     username: String,
     email: String,
-    profile:{
-        type: Schema.Types.ObjectId,
-        ref: 'Profile'
-    },
     role: {
         type: String,
         enum: ['USER', 'ADMIN'],

@@ -4,7 +4,7 @@ const Product = require('../models/Product')
 
 //REST API
 
-//get product
+//get products
 router.get('/', (req, res) => {
     Product.find().then(products => {
         return res.status(200).json(products)
