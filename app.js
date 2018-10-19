@@ -19,10 +19,10 @@ mongoose
   });
 
 const app = express();
-// app.use(require('cors')({
-//   origin: true,
-//   credentials: true
-// }))
+app.use(require('cors')({
+  origin: true,
+  credentials: true
+}))
 
 //session
 app.use(session({
